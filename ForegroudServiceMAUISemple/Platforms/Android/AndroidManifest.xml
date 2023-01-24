@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		  android:versionCode="1"
+			package="com.hi.OraOra.semple"
+			android:versionName="1.0.0">
+	
+	<application android:allowBackup="false" 
+				 android:icon="@mipmap/appicon" 
+				 android:roundIcon="@mipmap/appicon_round"
+				 android:windowSoftInputMode="stateHidden|adjustPan"
+				 android:supportsRtl="true"
+				 android:usesCleartextTraffic="true"
+				 android:manageSpaceActivity=".ActivityOfMyChoice"
+				 android:allowClearUserData="false">
+	</application>
+
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+</manifest>

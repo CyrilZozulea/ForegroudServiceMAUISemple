@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForegroudServiceMAUISemple.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid RowDefinitions="*,*">
+
+        <Grid ColumnDefinitions="*,50,*,50,*"
+              Margin="0,100,0,0"
+              x:Name="Timer"
+              IsVisible="false">
+            <Label Text="00"
+                   Grid.Column="0"
+                   FontSize="30"
+                   x:Name="HoursLabel"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+            <Label Grid.Column="1"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                   Margin="0,6,0,0"
+                   HorizontalOptions="Center"
+                   Text=":"/>
+            <Label Text="00"
+                   Grid.Column="2"
+                   FontSize="30"
+                   x:Name="MinutesLabel"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+            <Label Grid.Column="3"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                   Margin="0,6,0,0"
+                   HorizontalOptions="Center"
+                   Text=":"/>
+            <Label Text="00"
+                   Grid.Column="4"
+                   FontSize="30"
+                   x:Name="SecondsLabel"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+        </Grid>
+        <Grid RowDefinitions="50,185"
+              Margin="0,50,0,0"
+              ColumnDefinitions="*,10,*,10,*"
+              x:Name="SettingGrid">
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Text="Hours"/>
+            <Label Grid.Row="0"
+                   Grid.Column="2"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Text="Minutes"/>
+            <Label Grid.Row="0"
+                   Grid.Column="4"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Text="Seconds"/>
+            <Grid Grid.Row="1"
+                  Grid.Column="0"
+                  HorizontalOptions="Center">
+                <CollectionView x:Name="HoursCollection"
+                                Scrolled="OnHoursScroll">
+                    <CollectionView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>00</x:String>
+                            <x:String>01</x:String>
+                            <x:String>02</x:String>
+                            <x:String>03</x:String>
+                            <x:String>04</x:String>
+                            <x:String>05</x:String>
+                            <x:String>06</x:String>
+                            <x:String>07</x:String>
+                            <x:String>08</x:String>
+                            <x:String>09</x:String>
+                            <x:String>10</x:String>
+                        </x:Array>
+                    </CollectionView.ItemsSource>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Label Text="{Binding}" FontSize="40"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical"
+                           SnapPointsType="Mandatory"/>
+                    </CollectionView.ItemsLayout>
+                </CollectionView>
+            </Grid>
+            <Label Grid.Row="1"
+                   Grid.Column="1"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                   Margin="0,15,0,0"
+                   HorizontalOptions="Center"
+                   Text=":"/>
+            <Grid Grid.Row="1"
+                  Grid.Column="2"
+                  HorizontalOptions="Center">
+                <CollectionView x:Name="MinutesCllection"
+                                Scrolled="OnMinutesScroll">
+                    <CollectionView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>00</x:String>
+                            <x:String>01</x:String>
+                            <x:String>02</x:String>
+                            <x:String>03</x:String>
+                            <x:String>04</x:String>
+                            <x:String>05</x:String>
+                            <x:String>06</x:String>
+                            <x:String>07</x:String>
+                            <x:String>08</x:String>
+                            <x:String>09</x:String>
+                            <x:String>10</x:String>
+                            <x:String>11</x:String>
+                            <x:String>12</x:String>
+                            <x:String>13</x:String>
+                            <x:String>14</x:String>
+                            <x:String>15</x:String>
+                            <x:String>16</x:String>
+                            <x:String>17</x:String>
+                            <x:String>18</x:String>
+                            <x:String>19</x:String>
+                            <x:String>20</x:String>
+                            <x:String>21</x:String>
+                            <x:String>22</x:String>
+                            <x:String>23</x:String>
+                            <x:String>24</x:String>
+                            <x:String>25</x:String>
+                            <x:String>26</x:String>
+                            <x:String>27</x:String>
+                            <x:String>28</x:String>
+                            <x:String>29</x:String>
+                            <x:String>30</x:String>
+                            <x:String>31</x:String>
+                            <x:String>32</x:String>
+                            <x:String>33</x:String>
+                            <x:String>34</x:String>
+                            <x:String>35</x:String>
+                            <x:String>36</x:String>
+                            <x:String>37</x:String>
+                            <x:String>38</x:String>
+                            <x:String>39</x:String>
+                            <x:String>40</x:String>
+                            <x:String>41</x:String>
+                            <x:String>42</x:String>
+                            <x:String>43</x:String>
+                            <x:String>44</x:String>
+                            <x:String>45</x:String>
+                            <x:String>46</x:String>
+                            <x:String>47</x:String>
+                            <x:String>48</x:String>
+                            <x:String>49</x:String>
+                            <x:String>50</x:String>
+                            <x:String>51</x:String>
+                            <x:String>52</x:String>
+                            <x:String>53</x:String>
+                            <x:String>54</x:String>
+                            <x:String>55</x:String>
+                            <x:String>56</x:String>
+                            <x:String>57</x:String>
+                            <x:String>58</x:String>
+                            <x:String>59</x:String>
+                            <x:String>60</x:String>
+                        </x:Array>
+                    </CollectionView.ItemsSource>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Label Text="{Binding}" FontSize="40"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical"
+                           SnapPointsType="Mandatory"/>
+                    </CollectionView.ItemsLayout>
+                </CollectionView>
+            </Grid>
+            <Label Grid.Row="1"
+                   Grid.Column="3"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                   Margin="0,15,0,0"
+                   HorizontalOptions="Center"
+                   Text=":"/>
+            <Grid Grid.Row="1"
+                  Grid.Column="4"
+                  HorizontalOptions="Center">
+                <CollectionView x:Name="SecondsCllection"
+                                Scrolled="OnSecondsScroll">
+                    <CollectionView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>00</x:String>
+                            <x:String>01</x:String>
+                            <x:String>02</x:String>
+                            <x:String>03</x:String>
+                            <x:String>04</x:String>
+                            <x:String>05</x:String>
+                            <x:String>06</x:String>
+                            <x:String>07</x:String>
+                            <x:String>08</x:String>
+                            <x:String>09</x:String>
+                            <x:String>10</x:String>
+                            <x:String>11</x:String>
+                            <x:String>12</x:String>
+                            <x:String>13</x:String>
+                            <x:String>14</x:String>
+                            <x:String>15</x:String>
+                            <x:String>16</x:String>
+                            <x:String>17</x:String>
+                            <x:String>18</x:String>
+                            <x:String>19</x:String>
+                            <x:String>20</x:String>
+                            <x:String>21</x:String>
+                            <x:String>22</x:String>
+                            <x:String>23</x:String>
+                            <x:String>24</x:String>
+                            <x:String>25</x:String>
+                            <x:String>26</x:String>
+                            <x:String>27</x:String>
+                            <x:String>28</x:String>
+                            <x:String>29</x:String>
+                            <x:String>30</x:String>
+                            <x:String>31</x:String>
+                            <x:String>32</x:String>
+                            <x:String>33</x:String>
+                            <x:String>34</x:String>
+                            <x:String>35</x:String>
+                            <x:String>36</x:String>
+                            <x:String>37</x:String>
+                            <x:String>38</x:String>
+                            <x:String>39</x:String>
+                            <x:String>40</x:String>
+                            <x:String>41</x:String>
+                            <x:String>42</x:String>
+                            <x:String>43</x:String>
+                            <x:String>44</x:String>
+                            <x:String>45</x:String>
+                            <x:String>46</x:String>
+                            <x:String>47</x:String>
+                            <x:String>48</x:String>
+                            <x:String>49</x:String>
+                            <x:String>50</x:String>
+                            <x:String>51</x:String>
+                            <x:String>52</x:String>
+                            <x:String>53</x:String>
+                            <x:String>54</x:String>
+                            <x:String>55</x:String>
+                            <x:String>56</x:String>
+                            <x:String>57</x:String>
+                            <x:String>58</x:String>
+                            <x:String>59</x:String>
+                            <x:String>60</x:String>
+                        </x:Array>
+                    </CollectionView.ItemsSource>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Label Text="{Binding}" FontSize="40"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical"
+                           SnapPointsType="Mandatory"/>
+                    </CollectionView.ItemsLayout>
+                </CollectionView>
+            </Grid>
+        </Grid>
+        <Button Grid.Row="1"
+                x:Name="CounterBtn"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="Set timer"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"/>
+    </Grid>
+
+</ContentPage>
